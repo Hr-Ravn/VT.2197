@@ -5,7 +5,7 @@
   },
   "brightness": 80,
   "completion_alert": true,
-  "config_version": 9,
+  "config_version": 10,
   "dark_mode": true,
   "display": {
     "animations_enabled": false,
@@ -14,6 +14,7 @@
     "dim_sec": 300,
     "drm_device": "",
     "gcode_render_mode": 3,
+    "screensaver_type": 2,
     "sleep_sec": 600,
     "theme": "midnight",
     "time_format": 1
@@ -42,8 +43,45 @@
     "selected_strips": null
   },
   "log_path": "/tmp/helixscreen.log",
+  "material_overrides": {
+    "ABS": {
+      "bed_temp": 110,
+      "nozzle_min": 260
+    },
+    "ASA": {
+      "bed_temp": 110,
+      "nozzle_min": 260
+    }
+  },
   "motion": {
-    "jog_mode": 1
+    "jog_mode": 2
+  },
+  "print_start_history": {
+    "entries": [
+      {
+        "phases": {
+          "3": 485
+        },
+        "timestamp": 1775279586,
+        "total": 485
+      },
+      {
+        "phases": {
+          "3": 110
+        },
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {
+          "3": 45,
+          "4": 20
+        },
+        "temp_bucket": 150,
+        "timestamp": 1775484780,
+        "total": 65
+      }
+    ]
   },
   "printer": {
     "leds": {
@@ -81,15 +119,15 @@
       "filament": {
         "external_spool": {
           "assigned": true,
-          "bed_temp": 100,
-          "brand": "LDO",
-          "color_rgb": 2438982,
+          "bed_temp": 105,
+          "brand": "Sunlu",
+          "color_rgb": 3816507,
           "material": "ABS",
           "nozzle_temp_max": 0,
           "nozzle_temp_min": 0,
-          "remaining_weight_g": 756.0265502929688,
-          "spool_name": "LDO ABS - LDO Industry Blue",
-          "spoolman_id": 38,
+          "remaining_weight_g": 343.5589904785156,
+          "spool_name": "Sunlu ABS - Black",
+          "spoolman_id": 35,
           "total_weight_g": 1000.0
         }
       },
@@ -102,17 +140,24 @@
           "extruder",
           "fan",
           "heater_fan hotend_fan",
-          "output_pin caselight"
+          "output_pin caselight",
+          "controller_fan Skirt_fans",
+          "temperature_fan Electronics",
+          "temperature_fan RPi",
+          "fan_generic NeverMore"
         ],
         "last_snapshot": {
           "fans": [
             "fan_generic BedFan",
+            "fan_generic NeverMore",
             "fan",
             "heater_fan hotend_fan",
             "controller_fan Skirt_fans",
-            "temperature_fan Electronics"
+            "temperature_fan RPi"
           ],
-          "filament_sensors": [],
+          "filament_sensors": [
+            "filament_switch_sensor Filament"
+          ],
           "heaters": [
             "heater_bed",
             "extruder"
@@ -123,7 +168,7 @@
             "neopixel sb_leds"
           ],
           "sensors": [
-            "temperature_fan Electronics",
+            "temperature_fan RPi",
             "temperature_sensor chamber_Toolhead",
             "temperature_sensor nh_temp",
             "temperature_sensor Leviathan",
@@ -133,9 +178,12 @@
             "tmc5160 stepper_x",
             "tmc5160 stepper_y"
           ],
-          "timestamp": "2026-03-27T04:57:41Z"
+          "timestamp": "2026-04-06T13:45:26Z"
         },
-        "optional": []
+        "optional": [
+          "temperature_fan Electronics",
+          "controller_fan Skirt_fans"
+        ]
       },
       "heaters": {
         "bed": "heater_bed",
@@ -185,11 +233,11 @@
                 },
                 {
                   "col": 0,
-                  "colspan": 4,
+                  "colspan": 2,
                   "config": {
                     "show_job_queue": true,
-                    "show_recent_prints": true,
-                    "show_reprint_last": true,
+                    "show_recent_prints": false,
+                    "show_reprint_last": false,
                     "show_title": false
                   },
                   "enabled": true,
@@ -224,8 +272,12 @@
                 {
                   "col": -1,
                   "colspan": 1,
+                  "config": {
+                    "device": "__all__",
+                    "icon": "power_cycle"
+                  },
                   "enabled": false,
-                  "id": "power",
+                  "id": "power_device:1",
                   "row": -1,
                   "rowspan": 1
                 },
@@ -377,11 +429,11 @@
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
+                  "col": 2,
                   "colspan": 2,
-                  "enabled": false,
+                  "enabled": true,
                   "id": "print_stats",
-                  "row": -1,
+                  "row": 2,
                   "rowspan": 2
                 },
                 {
@@ -456,7 +508,23 @@
     },
     "show_printer_switcher": false
   },
+  "sound_theme": "miami_vice",
   "sounds_enabled": false,
+  "standard_macros": {
+    "bed_level": "",
+    "bed_mesh": "",
+    "cancel": "",
+    "clean_nozzle": "NOZZLE_SCRUB",
+    "heat_soak": "",
+    "load_filament": "",
+    "pause": "",
+    "purge": "",
+    "quick_button_1": "load_filament",
+    "quick_button_2": "unload_filament",
+    "quick_button_3": "clean_nozzle",
+    "resume": "",
+    "unload_filament": ""
+  },
   "telemetry_enabled": true,
   "theme": {
     "preset": 0
