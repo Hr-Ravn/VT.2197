@@ -5,7 +5,7 @@
   },
   "brightness": 80,
   "completion_alert": true,
-  "config_version": 10,
+  "config_version": 12,
   "dark_mode": true,
   "display": {
     "animations_enabled": false,
@@ -15,9 +15,10 @@
     "drm_device": "",
     "gcode_render_mode": 3,
     "screensaver_type": 2,
-    "sleep_sec": 600,
+    "sleep_sec": 1800,
     "theme": "midnight",
-    "time_format": 1
+    "time_format": 1,
+    "timezone": "Europe/Berlin"
   },
   "gcode_viewer": {
     "shading_model": "phong",
@@ -54,32 +55,31 @@
     }
   },
   "motion": {
-    "jog_mode": 2
+    "jog_mode": 1
   },
   "print_start_history": {
     "entries": [
       {
-        "phases": {
-          "3": 485
-        },
-        "timestamp": 1775279586,
-        "total": 485
+        "phases": {},
+        "temp_bucket": 150,
+        "timestamp": 1775484780,
+        "total": 65
       },
       {
-        "phases": {
-          "3": 110
-        },
+        "phases": {},
         "timestamp": 1775413267,
         "total": 110
       },
       {
-        "phases": {
-          "3": 45,
-          "4": 20
-        },
+        "phases": {},
         "temp_bucket": 150,
         "timestamp": 1775484780,
         "total": 65
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
       }
     ]
   },
@@ -119,20 +119,82 @@
       "filament": {
         "external_spool": {
           "assigned": true,
-          "bed_temp": 105,
-          "brand": "Sunlu",
-          "color_rgb": 3816507,
-          "material": "ABS",
+          "bed_temp": 110,
+          "brand": "Fiberlogy",
+          "color_rgb": 13265411,
+          "material": "ASA",
           "nozzle_temp_max": 0,
           "nozzle_temp_min": 0,
-          "remaining_weight_g": 343.5589904785156,
-          "spool_name": "Sunlu ABS - Black",
-          "spoolman_id": 35,
-          "total_weight_g": 1000.0
+          "remaining_weight_g": 596.5177612304688,
+          "spool_name": "Fiberlogy ASA - Orange",
+          "spoolman_id": 18,
+          "total_weight_g": 750.0
         }
       },
       "filament_sensors": {
-        "sensors": null
+        "master_enabled": true,
+        "sensors": [
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor tool_start",
+            "role": "entry",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor bypass",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor TN_expanded",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor TN_compressed",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor lane1_prep",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor lane1_load",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor lane2_prep",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor lane2_load",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor NightOwl_Hub_Hub",
+            "role": "none",
+            "type": "switch"
+          },
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor quiet_mode",
+            "role": "none",
+            "type": "switch"
+          }
+        ]
       },
       "hardware": {
         "expected": [
@@ -156,7 +218,16 @@
             "temperature_fan RPi"
           ],
           "filament_sensors": [
-            "filament_switch_sensor Filament"
+            "filament_switch_sensor tool_start",
+            "filament_switch_sensor bypass",
+            "filament_switch_sensor TN_expanded",
+            "filament_switch_sensor TN_compressed",
+            "filament_switch_sensor lane1_prep",
+            "filament_switch_sensor lane1_load",
+            "filament_switch_sensor lane2_prep",
+            "filament_switch_sensor lane2_load",
+            "filament_switch_sensor NightOwl_Hub_Hub",
+            "filament_switch_sensor quiet_mode"
           ],
           "heaters": [
             "heater_bed",
@@ -165,6 +236,7 @@
           "leds": [
             "output_pin caselight",
             "output_pin pcb_led",
+            "neopixel Skirt_led",
             "neopixel sb_leds"
           ],
           "sensors": [
@@ -176,17 +248,25 @@
             "temperature_sensor chamber_mid",
             "temperature_sensor chamber",
             "tmc5160 stepper_x",
-            "tmc5160 stepper_y"
+            "tmc5160 stepper_y",
+            "temperature_sensor NightOwl-ERB"
           ],
-          "timestamp": "2026-04-06T13:45:26Z"
+          "timestamp": "2026-04-17T20:03:28Z"
         },
         "optional": [
           "temperature_fan Electronics",
-          "controller_fan Skirt_fans"
+          "controller_fan Skirt_fans",
+          "heater_bed",
+          "extruder",
+          "fan_generic BedFan",
+          "output_pin caselight",
+          "fan",
+          "heater_fan hotend_fan"
         ]
       },
       "heaters": {
         "bed": "heater_bed",
+        "chamber": "none",
         "hotend": "extruder"
       },
       "leds": {
@@ -202,10 +282,12 @@
         ],
         "last_brightness": 100,
         "last_color": "#FFFFFF",
+        "last_white": 0.0,
         "led_on_at_start": false,
         "macro_devices": [],
         "selected": [],
         "selected_strips": [
+          "neopixel Skirt_led",
           "neopixel sb_leds",
           "output_pin caselight"
         ],
@@ -300,9 +382,9 @@
                 {
                   "col": 4,
                   "colspan": 1,
-                  "enabled": false,
+                  "enabled": true,
                   "id": "ams",
-                  "row": 2,
+                  "row": 1,
                   "rowspan": 1
                 },
                 {
@@ -373,11 +455,11 @@
                   "rowspan": 1
                 },
                 {
-                  "col": 4,
+                  "col": 3,
                   "colspan": 1,
-                  "enabled": true,
+                  "enabled": false,
                   "id": "active_spool",
-                  "row": 1,
+                  "row": 2,
                   "rowspan": 1
                 },
                 {
@@ -492,19 +574,80 @@
                   "id": "thermistor:1",
                   "row": 2,
                   "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "power_device",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": 4,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "fan_stack",
+                  "row": 1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "fan",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "thermistor",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 2,
+                  "enabled": false,
+                  "id": "temp_graph",
+                  "row": -1,
+                  "rowspan": 2
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "favorite_macro",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "motion",
+                  "row": -1,
+                  "rowspan": 1
                 }
               ]
             }
           ]
         }
       },
+      "printer_image": "shipped:voron-trident",
       "printer_name": "VT.2197",
+      "probe_sensors": {
+        "sensors": null
+      },
       "temp_sensors": {
         "bed": "heater_bed",
         "hotend": "extruder"
       },
       "type": "Voron Trident",
-      "wizard_completed": true
+      "wizard_completed": true,
+      "z_movement_style": 1
     },
     "show_printer_switcher": false
   },
@@ -528,6 +671,10 @@
   "telemetry_enabled": true,
   "theme": {
     "preset": 0
+  },
+  "tour": {
+    "completed": true,
+    "last_seen_version": 1
   },
   "ui": {
     "cached_grid": {
