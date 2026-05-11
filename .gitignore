@@ -4,3 +4,5 @@ ShakeTune_results/*/*.png
 crowsnest.conf.*
 moonraker.conf.bkp
 moonraker.conf.bak.helixscreen
+*.bkp
+*.conf.backup
