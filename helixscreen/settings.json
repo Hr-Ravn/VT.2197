@@ -5,7 +5,7 @@
   },
   "brightness": 80,
   "completion_alert": true,
-  "config_version": 12,
+  "config_version": 16,
   "dark_mode": true,
   "display": {
     "animations_enabled": false,
@@ -55,15 +55,19 @@
     }
   },
   "motion": {
-    "jog_mode": 1
+    "jog_mode": 2
   },
   "print_start_history": {
     "entries": [
       {
         "phases": {},
-        "temp_bucket": 150,
-        "timestamp": 1775484780,
-        "total": 65
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
       },
       {
         "phases": {},
@@ -72,14 +76,72 @@
       },
       {
         "phases": {},
-        "temp_bucket": 150,
-        "timestamp": 1775484780,
-        "total": 65
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {
+          "7": 167
+        },
+        "temp_bucket": 2,
+        "timestamp": 1778437854,
+        "total": 303
+      },
+      {
+        "phases": {
+          "7": 224
+        },
+        "temp_bucket": 1,
+        "timestamp": 1778436132,
+        "total": 1486
       },
       {
         "phases": {},
         "timestamp": 1775546276,
         "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {
+          "7": 235
+        },
+        "temp_bucket": 1,
+        "timestamp": 1778479896,
+        "total": 1556
       }
     ]
   },
@@ -119,16 +181,16 @@
       "filament": {
         "external_spool": {
           "assigned": true,
-          "bed_temp": 110,
-          "brand": "Fiberlogy",
-          "color_rgb": 13265411,
-          "material": "ASA",
+          "bed_temp": 100,
+          "brand": "LDO",
+          "color_rgb": 2438982,
+          "material": "ABS",
           "nozzle_temp_max": 0,
           "nozzle_temp_min": 0,
-          "remaining_weight_g": 596.5177612304688,
-          "spool_name": "Fiberlogy ASA - Orange",
-          "spoolman_id": 18,
-          "total_weight_g": 750.0
+          "remaining_weight_g": 128.88951110839844,
+          "spool_name": "LDO ABS - LDO Industry Blue",
+          "spoolman_id": 38,
+          "total_weight_g": 1000.0
         }
       },
       "filament_sensors": {
@@ -211,11 +273,11 @@
         "last_snapshot": {
           "fans": [
             "fan_generic BedFan",
-            "fan_generic NeverMore",
             "fan",
             "heater_fan hotend_fan",
             "controller_fan Skirt_fans",
-            "temperature_fan RPi"
+            "temperature_fan RPi",
+            "fan_generic NeverMore"
           ],
           "filament_sensors": [
             "filament_switch_sensor tool_start",
@@ -251,7 +313,7 @@
             "tmc5160 stepper_y",
             "temperature_sensor NightOwl-ERB"
           ],
-          "timestamp": "2026-04-17T20:03:28Z"
+          "timestamp": "2026-05-10T20:15:11Z"
         },
         "optional": [
           "temperature_fan Electronics",
@@ -280,8 +342,8 @@
           "#9C27B0",
           "#00BCD4"
         ],
-        "last_brightness": 100,
-        "last_color": "#FFFFFF",
+        "last_brightness": 0,
+        "last_color": "#000000",
         "last_white": 0.0,
         "led_on_at_start": false,
         "macro_devices": [],
@@ -300,7 +362,7 @@
       "panel_widgets": {
         "home": {
           "main_page_index": 0,
-          "next_page_id": 1,
+          "next_page_id": 2,
           "pages": [
             {
               "id": "main",
@@ -314,10 +376,11 @@
                   "rowspan": 2
                 },
                 {
-                  "col": 0,
+                  "col": 2,
                   "colspan": 2,
                   "config": {
                     "show_job_queue": true,
+                    "show_print_files": true,
                     "show_recent_prints": false,
                     "show_reprint_last": false,
                     "show_title": false
@@ -404,11 +467,11 @@
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
+                  "col": 3,
                   "colspan": 1,
-                  "enabled": false,
+                  "enabled": true,
                   "id": "led_controls",
-                  "row": -1,
+                  "row": 0,
                   "rowspan": 1
                 },
                 {
@@ -488,7 +551,7 @@
                 },
                 {
                   "col": 2,
-                  "colspan": 2,
+                  "colspan": 1,
                   "enabled": true,
                   "id": "clock",
                   "row": 0,
@@ -511,7 +574,7 @@
                   "rowspan": 1
                 },
                 {
-                  "col": 2,
+                  "col": 0,
                   "colspan": 2,
                   "enabled": true,
                   "id": "print_stats",
@@ -624,11 +687,24 @@
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
+                  "col": 0,
                   "colspan": 1,
                   "enabled": false,
                   "id": "motion",
-                  "row": -1,
+                  "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": 3,
+                  "colspan": 1,
+                  "config": {
+                    "color": 8421504,
+                    "icon": "bed",
+                    "macro": "BLACKOUT"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:1",
+                  "row": 1,
                   "rowspan": 1
                 }
               ]
@@ -672,6 +748,16 @@
   "theme": {
     "preset": 0
   },
+  "thermal": {
+    "rates": {
+      "extruder": {
+        "heat_rate": 1.6998140811920166
+      },
+      "heater_bed": {
+        "heat_rate": 39.24226379394531
+      }
+    }
+  },
   "tour": {
     "completed": true,
     "last_seen_version": 1
@@ -682,6 +768,9 @@
         "rows": 4
       }
     }
+  },
+  "update": {
+    "dismissed_version": "0.99.44"
   },
   "wifi_expected": false,
   "wizard_completed": true
