@@ -5,7 +5,7 @@
   },
   "brightness": 80,
   "completion_alert": true,
-  "config_version": 16,
+  "config_version": 17,
   "dark_mode": true,
   "display": {
     "animations_enabled": false,
@@ -66,11 +66,6 @@
       },
       {
         "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
         "timestamp": 1775413267,
         "total": 110
       },
@@ -81,19 +76,24 @@
       },
       {
         "phases": {
-          "7": 167
+          "7": 165
         },
         "temp_bucket": 2,
-        "timestamp": 1778437854,
-        "total": 303
+        "timestamp": 1780252534,
+        "total": 672
       },
       {
         "phases": {
-          "7": 224
+          "7": 170
         },
-        "temp_bucket": 1,
-        "timestamp": 1778436132,
-        "total": 1486
+        "temp_bucket": 2,
+        "timestamp": 1780254147,
+        "total": 459
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
       },
       {
         "phases": {},
@@ -137,11 +137,11 @@
       },
       {
         "phases": {
-          "7": 235
+          "7": 248
         },
         "temp_bucket": 1,
-        "timestamp": 1778479896,
-        "total": 1556
+        "timestamp": 1780603067,
+        "total": 1398
       }
     ]
   },
@@ -179,17 +179,18 @@
         "part": "fan"
       },
       "filament": {
+        "auto_color_map": false,
         "external_spool": {
           "assigned": true,
-          "bed_temp": 100,
-          "brand": "LDO",
-          "color_rgb": 2438982,
+          "bed_temp": 105,
+          "brand": "Sunlu",
+          "color_rgb": 3816507,
           "material": "ABS",
           "nozzle_temp_max": 0,
           "nozzle_temp_min": 0,
-          "remaining_weight_g": 128.88951110839844,
-          "spool_name": "LDO ABS - LDO Industry Blue",
-          "spoolman_id": 38,
+          "remaining_weight_g": 357.54644775390625,
+          "spool_name": "Sunlu ABS - Black",
+          "spoolman_id": 40,
           "total_weight_g": 1000.0
         }
       },
@@ -281,14 +282,18 @@
           ],
           "filament_sensors": [
             "filament_switch_sensor tool_start",
-            "filament_switch_sensor bypass",
-            "filament_switch_sensor TN_expanded",
-            "filament_switch_sensor TN_compressed",
+            "filament_switch_sensor Turtle_1_expanded",
+            "filament_switch_sensor Turtle_1_compressed",
             "filament_switch_sensor lane1_prep",
             "filament_switch_sensor lane1_load",
             "filament_switch_sensor lane2_prep",
             "filament_switch_sensor lane2_load",
-            "filament_switch_sensor NightOwl_Hub_Hub",
+            "filament_switch_sensor lane3_prep",
+            "filament_switch_sensor lane3_load",
+            "filament_switch_sensor lane4_prep",
+            "filament_switch_sensor lane4_load",
+            "filament_switch_sensor Turtle_1_Hub",
+            "filament_switch_sensor virtual_bypass",
             "filament_switch_sensor quiet_mode"
           ],
           "heaters": [
@@ -311,9 +316,9 @@
             "temperature_sensor chamber",
             "tmc5160 stepper_x",
             "tmc5160 stepper_y",
-            "temperature_sensor NightOwl-ERB"
+            "temperature_sensor Turtle_1"
           ],
-          "timestamp": "2026-05-10T20:15:11Z"
+          "timestamp": "2026-06-04T19:26:43Z"
         },
         "optional": [
           "temperature_fan Electronics",
@@ -719,6 +724,7 @@
       },
       "temp_sensors": {
         "bed": "heater_bed",
+        "chamber": "temperature_sensor chamber",
         "hotend": "extruder"
       },
       "type": "Voron Trident",
@@ -751,10 +757,10 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 1.6998140811920166
+        "heat_rate": 1.9209659099578857
       },
       "heater_bed": {
-        "heat_rate": 39.24226379394531
+        "heat_rate": 29.58523941040039
       }
     }
   },
@@ -770,7 +776,7 @@
     }
   },
   "update": {
-    "dismissed_version": "0.99.44"
+    "dismissed_version": "0.99.65"
   },
   "wifi_expected": false,
   "wizard_completed": true
