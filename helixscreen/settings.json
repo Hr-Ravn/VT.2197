@@ -61,6 +61,56 @@
     "entries": [
       {
         "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
+        "timestamp": 1775413267,
+        "total": 110
+      },
+      {
+        "phases": {},
+        "timestamp": 1775546276,
+        "total": 250
+      },
+      {
+        "phases": {},
         "timestamp": 1775546276,
         "total": 250
       },
@@ -79,69 +129,16 @@
           "7": 165
         },
         "temp_bucket": 2,
-        "timestamp": 1780252534,
-        "total": 672
+        "timestamp": 1780823630,
+        "total": 788
       },
       {
         "phases": {
-          "7": 170
+          "7": 172
         },
         "temp_bucket": 2,
-        "timestamp": 1780254147,
-        "total": 459
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775413267,
-        "total": 110
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775413267,
-        "total": 110
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775413267,
-        "total": 110
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {
-          "7": 248
-        },
-        "temp_bucket": 1,
-        "timestamp": 1780603067,
-        "total": 1398
+        "timestamp": 1780825066,
+        "total": 281
       }
     ]
   },
@@ -179,20 +176,7 @@
         "part": "fan"
       },
       "filament": {
-        "auto_color_map": false,
-        "external_spool": {
-          "assigned": true,
-          "bed_temp": 105,
-          "brand": "Sunlu",
-          "color_rgb": 3816507,
-          "material": "ABS",
-          "nozzle_temp_max": 0,
-          "nozzle_temp_min": 0,
-          "remaining_weight_g": 357.54644775390625,
-          "spool_name": "Sunlu ABS - Black",
-          "spoolman_id": 40,
-          "total_weight_g": 1000.0
-        }
+        "auto_color_map": false
       },
       "filament_sensors": {
         "master_enabled": true,
@@ -284,6 +268,13 @@
             "filament_switch_sensor tool_start",
             "filament_switch_sensor Turtle_1_expanded",
             "filament_switch_sensor Turtle_1_compressed",
+            "filament_switch_sensor TN_expanded",
+            "filament_switch_sensor TN_compressed",
+            "filament_switch_sensor lane5_prep",
+            "filament_switch_sensor lane5_load",
+            "filament_switch_sensor lane6_prep",
+            "filament_switch_sensor lane6_load",
+            "filament_switch_sensor NightOwl_Hub",
             "filament_switch_sensor lane1_prep",
             "filament_switch_sensor lane1_load",
             "filament_switch_sensor lane2_prep",
@@ -316,9 +307,10 @@
             "temperature_sensor chamber",
             "tmc5160 stepper_x",
             "tmc5160 stepper_y",
+            "temperature_sensor NightOwl-ERB",
             "temperature_sensor Turtle_1"
           ],
-          "timestamp": "2026-06-04T19:26:43Z"
+          "timestamp": "2026-06-14T14:08:47Z"
         },
         "optional": [
           "temperature_fan Electronics",
@@ -757,10 +749,10 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 1.9209659099578857
+        "heat_rate": 19.290996551513672
       },
       "heater_bed": {
-        "heat_rate": 29.58523941040039
+        "heat_rate": 17.075002670288086
       }
     }
   },
@@ -776,7 +768,7 @@
     }
   },
   "update": {
-    "dismissed_version": "0.99.65"
+    "dismissed_version": "0.99.77"
   },
   "wifi_expected": false,
   "wizard_completed": true
