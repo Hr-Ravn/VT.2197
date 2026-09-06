@@ -5,7 +5,7 @@
   },
   "brightness": 80,
   "completion_alert": true,
-  "config_version": 17,
+  "config_version": 19,
   "dark_mode": true,
   "display": {
     "animations_enabled": false,
@@ -14,6 +14,7 @@
     "dim_sec": 300,
     "drm_device": "",
     "gcode_render_mode": 3,
+    "gpu_3d_blocked": false,
     "screensaver_type": 2,
     "sleep_sec": 1800,
     "theme": "midnight",
@@ -32,6 +33,7 @@
       "d": 0.0,
       "e": 1.0,
       "f": 0.0,
+      "recheck_pending": false,
       "valid": false
     },
     "jitter_threshold": 5,
@@ -41,6 +43,9 @@
   },
   "language": "en",
   "led": {
+    "auto_state": {
+      "enabled": null
+    },
     "selected_strips": null
   },
   "log_path": "/tmp/helixscreen.log",
@@ -91,26 +96,6 @@
       },
       {
         "phases": {},
-        "timestamp": 1775413267,
-        "total": 110
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
-        "timestamp": 1775413267,
-        "total": 110
-      },
-      {
-        "phases": {},
-        "timestamp": 1775546276,
-        "total": 250
-      },
-      {
-        "phases": {},
         "timestamp": 1775546276,
         "total": 250
       },
@@ -139,6 +124,38 @@
         "temp_bucket": 2,
         "timestamp": 1780825066,
         "total": 281
+      },
+      {
+        "phases": {
+          "7": 165
+        },
+        "temp_bucket": 2,
+        "timestamp": 1781860001,
+        "total": 294
+      },
+      {
+        "phases": {
+          "7": 171
+        },
+        "temp_bucket": 2,
+        "timestamp": 1781863402,
+        "total": 207
+      },
+      {
+        "phases": {
+          "7": 190
+        },
+        "temp_bucket": 2,
+        "timestamp": 1781937451,
+        "total": 424
+      },
+      {
+        "phases": {
+          "7": 166
+        },
+        "temp_bucket": 2,
+        "timestamp": 1782760024,
+        "total": 442
       }
     ]
   },
@@ -179,15 +196,15 @@
         "auto_color_map": false,
         "external_spool": {
           "assigned": true,
-          "bed_temp": 105,
-          "brand": "Sunlu",
-          "color_rgb": 3816507,
+          "bed_temp": 0,
+          "brand": "LDO",
+          "color_rgb": 26495,
           "material": "ABS",
           "nozzle_temp_max": 0,
           "nozzle_temp_min": 0,
-          "remaining_weight_g": 792.4393920898438,
-          "spool_name": "Sunlu ABS - Black",
-          "spoolman_id": 41,
+          "remaining_weight_g": 992.1165161132813,
+          "spool_name": "LDO ABS - Dark Teal",
+          "spoolman_id": 44,
           "total_weight_g": 1000.0
         }
       },
@@ -323,7 +340,7 @@
             "temperature_sensor NightOwl-ERB",
             "temperature_sensor Turtle_1"
           ],
-          "timestamp": "2026-06-18T10:04:59Z"
+          "timestamp": "2026-07-18T19:48:45Z"
         },
         "optional": [
           "temperature_fan Electronics",
@@ -342,6 +359,9 @@
         "hotend": "extruder"
       },
       "leds": {
+        "auto_state": {
+          "mappings": null
+        },
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
@@ -710,7 +730,8 @@
                   "config": {
                     "color": 8421504,
                     "icon": "bed",
-                    "macro": "BLACKOUT"
+                    "macro": "BLACKOUT",
+                    "skip_param_prompt": true
                   },
                   "enabled": true,
                   "id": "favorite_macro:1",
@@ -778,10 +799,10 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 19.290996551513672
+        "heat_rate": 3.7848949432373047
       },
       "heater_bed": {
-        "heat_rate": 17.075002670288086
+        "heat_rate": 7.947057723999023
       }
     }
   },

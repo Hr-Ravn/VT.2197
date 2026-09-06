@@ -79,12 +79,6 @@ is_system_service = False
 server = http://192.168.1.231:7912
 sync_rate = 5
 
-[update_manager helixscreen]
-type = web
-channel = stable
-repo = prestonbrown/helixscreen
-path = /home/pi/helixscreen
-
 [update_manager moonraker-obico]
 type = git_repo
 path = /home/pi/moonraker-obico
